@@ -10,11 +10,11 @@ const BestPokemonFetcher = props => {
 
   console.log(bestPokemon);
 
-  if (!bestPokemon) {
-    return null;
-  } else {
-    return <BestPokemon pokemon={bestPokemon} abilities={bestPokemon.abilities} />
-  }
+  return (!bestPokemon ? ( 
+    <p>Loading...</p>
+   ) : (
+    <BestPokemon pokemon={bestPokemon} abilities={bestPokemon.abilities} />
+   ))
 }
 
 const BestPokemon = props => {
