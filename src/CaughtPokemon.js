@@ -1,7 +1,9 @@
 import React from "react";
 
 const CaughtPokemon = props => {
-    return <p>Caught 0 Pokemon on {props.date}</p>
-  }
+  const [totalCaught, setTotalCaught] = React.useState(3);
+
+  return <p>Caught {totalCaught} Pokemon on {props.date}</p>
+}
 
 export default CaughtPokemon;
